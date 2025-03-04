@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                @if (!connectedUser()) {
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            [routerLink]="['/']"
+                            routerLinkActive="router-link-active">
+                            Login
+                        </a>
+                    </li>
+                }
+                @else {
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            [routerLink]="['/profile']"
+                            routerLinkActive="router-link-active">
+                            Profile
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

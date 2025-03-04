@@ -1,0 +1,15 @@
+:host {
+    display: grid;
+    justify-content: center;
+    margin: 1rem;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        margin-block-start: 1rem;
+    }
+}

@@ -1,0 +1,14 @@
+<section>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Connected User</h5>
+            <p class="card-text">FirstName: {{ connectedUser()?.firstName }}</p>
+            <p class="card-text">LastName: {{ connectedUser()?.lastName }}</p>
+            <p class="card-text">Email: {{ connectedUser()?.email }}</p>
+            <p class="card-text">Rank: {{ connectedUser()?.rank }}</p>
+        </div>
+    </div>
+    <div class="actions">
+        <button type="button" class="btn btn-success" (click)="logout()">Logout</button>
+    </div>
+</section>

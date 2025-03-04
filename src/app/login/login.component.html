@@ -1,0 +1,23 @@
+<section>
+    <div class="login-form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div *ngIf="errorLogin"
+                class="alert alert-danger">
+                Invalid Credentials
+            </div>
+            <input type="text"
+                    class="form-control"
+                    placeholder="User Name"
+                    formControlName="username">
+            <input type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    formControlName="password">
+            <button type="submit"
+                    class="btn btn-success"
+                    [disabled]="!form.valid">
+                Login
+            </button>
+        </form>
+    </div>
+</section>
